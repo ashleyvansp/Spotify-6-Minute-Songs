@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import TokenHandler from './auth/TokenHandler';
+import Home from './components/Home';
+import Login from './components/Login';
+import { ProtectedRoute } from './components/ProtectedRoute/ProtectedRoute';
+import * as ROUTES from './constants/Routes';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Routes>
+            <Route path={ROUTES.AUTH_CALLBACK} element={<TokenHandler />} />
+            <Route path={ROUTES.HOME} element={
+                <ProtectedRoute>
+                    <Home />
+                </ProtectedRoute>
+            } />
+            <Route path={ROUTES.LOGIN} element={<Login />} />
+        </Routes>
+    );
 }
 
 export default App;
