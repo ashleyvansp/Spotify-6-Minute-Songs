@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Spotify-6-Minute-Songs/static/css/main.e6c13ad2.css",
+    "main.js": "/Spotify-6-Minute-Songs/static/js/main.4b46ee3c.js",
+    "index.html": "/Spotify-6-Minute-Songs/index.html",
+    "main.e6c13ad2.css.map": "/Spotify-6-Minute-Songs/static/css/main.e6c13ad2.css.map",
+    "main.4b46ee3c.js.map": "/Spotify-6-Minute-Songs/static/js/main.4b46ee3c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.4b46ee3c.js"
+  ]
+}
