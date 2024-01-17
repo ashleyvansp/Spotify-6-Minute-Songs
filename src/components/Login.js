@@ -1,5 +1,6 @@
 import React from 'react';
 import { useAuth } from '../auth/AuthContext';
+import '../App.css';
 
 function Login() {
     const { login } = useAuth();
@@ -7,7 +8,6 @@ function Login() {
     return (
         <div className="App">
             <header className="App-header">
-                <h1>Login</h1>
                 <button className="btn-spotify" onClick={login} >
                     Login with Spotify 
                 </button>
